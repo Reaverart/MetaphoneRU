@@ -1,6 +1,39 @@
 # MetaphoneRU
 Russian adoptation of metaphone.
-Based on algoritm by Petr Kankovsky
+Based on algorithm by Petr Kankovski
+
+1. For all vowels (А, Е, Ё, И, О, У, Ы, Э, Ю, Я) do follow transitions:
+  ЙО, ИО, ЙЕ, ИЕ → И
+  О, Ы, Я → А
+  Е, Ё, Э → И
+  Ю → У
+
+2. For all consonants (Б, В, Г, Д, Ж, З, Й, К, Л, М, Н, П, Р, С, Т, Ф, Х, Ц, Ч, Ш, Щ), prepends any other consonant, except Л, М, Н or Р, or fot consonants in the ending do follow transitions:
+  Б → П
+  З → С
+  Д → Т
+  В → Ф
+  Г → К
+
+3. Merge ТС and ДС to Ц:
+  ТС → Ц
+
 
 Русская адаптация Метафона.
 Основана на алгоритме Петра Каньковского
+
+1. Для всех гласных букв (А, Е, Ё, И, О, У, Ы, Э, Ю, Я) проделать следующие операции.
+  ЙО, ИО, ЙЕ, ИЕ → И
+  О, Ы, Я → А
+  Е, Ё, Э → И
+  Ю → У
+
+2. Для всех согласных букв (Б, В, Г, Д, Ж, З, Й, К, Л, М, Н, П, Р, С, Т, Ф, Х, Ц, Ч, Ш, Щ), за которыми следует любая согласная, кроме Л, М, Н или Р, либо же для согласных на конце слова, провести оглушение:
+  Б → П
+  З → С
+  Д → Т
+  В → Ф
+  Г → К
+  
+3. Склеиваем ТС и ДС в Ц:
+  ТС → Ц

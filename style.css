@@ -1,0 +1,25 @@
+html {  
+  color: #222;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.182;
+}
+
+.wrap {
+  text-align: left;
+  padding: 30px;
+  width: 440px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+h1 {
+  width: 500px;
+  margin: 30px auto ;
+}
+input {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+}

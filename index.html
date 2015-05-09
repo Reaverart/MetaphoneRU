@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Metaphone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./metaphone.js"></script>
+  </head>
+  <body>
+    <h1>Russian adoptation of metaphone</h1>
+    <div class="wrap">
+      <h2>Type something:</h1>
+      <input id="input" onkeyup="document.getElementById('output').innerHTML = metaphoneRu.process(this.value)" type="text" name="metaphone" id="">
+      <h2>Here it goes:</h1>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>

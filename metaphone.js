@@ -7,6 +7,15 @@
         root.metaphoneRu = factory();
   }
 }(this, function () {
+    function normalize (token) {
+        token = token.toUpperCase();
+        return token.replace(/Ъ|Ь|-/g, '')
+    }
+
+    function removeDuplicates (token) {
+        return token.replace(/(.)\1/gi, '$1')
+    }
+
     function IOtoI (token) {
         return token.replace(/ЙО|ИО|ЙЕ|ИЕ/g, 'И')
     }
@@ -57,9 +66,9 @@
         return token.replace(/ТС|ДС/g, 'Ц')
     }
     return {
-        code: function (token) {
-            token = token.toUpperCase();
-
+        process: function (token) {
+            token = normalize(token);
+            token = removeDuplicates(token);
             token = IOtoI(token);
             token = OtoA(token);
             token = EtoI(token);
@@ -70,6 +79,7 @@
             token = VtoF(token);
             token = GtoK(token);
             token = TStoC(token);
+            token = removeDuplicates(token);
 
             return token;
         }

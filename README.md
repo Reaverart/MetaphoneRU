@@ -1,4 +1,7 @@
 # MetaphoneRU
+## Usage
+Here is [demo](http://reaverart.github.io/MetaphoneRU/)
+
 ## Russian adoptation of metaphone.
 Based on algorithm by Petr Kankovski
 
